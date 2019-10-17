@@ -1,7 +1,11 @@
 $(document).ready(function() {
     $('input#btnSubmit').click(function() {
-        alert('The button was clicked');
-    });
+        function alertValue() {
+            alert($('input').val());
+        }
+        $('input').change(alertValue);
+        alertValue();
+        });
 });
 
 
