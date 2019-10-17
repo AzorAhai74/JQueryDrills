@@ -12,6 +12,7 @@ $(document).ready(function() {
                 $(':input[type="submit"]').prop('disabled', false);
             }
         });
+    $('form').after('<div></div>');
 });
 
 
