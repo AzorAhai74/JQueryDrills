@@ -1,9 +1,14 @@
 $(document).ready(function() {
-    $('input#btnSubmit').click(function() {
+    let submitBtn = $('#btnSubmit');
+    let $myH2 = $("<h2></h2>");
+    $(submitBtn).click(function() {
         function alertValue() {
-            alert($('input').val());
-        }
+            alert($('input').val());   
+        }  
         $('input').change(alertValue);
+        $('div').append($myH2);
+        $myH2.append($(':input[type="text"]').val());
+        event.preventDefault();
         alertValue();
         });
     $(':input[type="submit"]').prop('disabled', true);
@@ -13,6 +18,7 @@ $(document).ready(function() {
             }
         });
     $('form').after('<div></div>');
+           
 });
 
 
