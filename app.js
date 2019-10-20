@@ -9,6 +9,12 @@ $(document).ready(function() {
         $('div').append($myH2);
         $myH2.append($(':input[type="text"]').val());
         event.preventDefault();
+        $('h2').on('mouseover', function() {
+            $(this).css({
+                'background-color': 'red',
+                'border-radius': '10px'
+            });
+        })
         alertValue();
         });
     $(':input[type="submit"]').prop('disabled', true);
@@ -18,7 +24,6 @@ $(document).ready(function() {
             }
         });
     $('form').after('<div></div>');
-           
 });
 
 
