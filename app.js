@@ -20,11 +20,14 @@ $(document).ready(function() {
         alertValue();
         $('ul').append($myList);
         $myList.append($(':input[type="text"]').val());
-        $('li').on('click', function() {
-            $(this).css({
-                
-            })
-        })
+        let myColors = ['#323643', '#97FF73', '#FF6513'];
+        function clickList() {
+            $('li').each(function() {
+                var randomize = Math.floor(Math.random() * myColors.length);
+                $(this).css('background-color', myColors[randomize]);
+            });
+        }
+        clickList();
         });
     $(':input[type="submit"]').prop('disabled', true);
         $('input[type="text"]').keyup(function() {
