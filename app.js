@@ -9,7 +9,7 @@ $(document).ready(function() {
         $('input').change(alertValue);
         $('div').append($myH2);//creates a header when the submit button is clicked//
         $myH2.append($(':input[type="text"]').val());//inputs the text from the form field when the submit button is clicked//
-        event.preventDefault();
+        $('form').trigger('reset');
         //below when the mouse hovers over the text, the background color changes to red and the border radius increases to 10px//
         $('h2').on('mouseover', function() {
             $(this).css({
